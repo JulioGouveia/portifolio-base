@@ -38,8 +38,8 @@ ContainerSobre.Contato = styled.div`
 export function WrapperSobre () {
     
     const URL_github = "https://github.com/juliogouveia";
-    const URL_linkedin = "https://github.com/juliogouveia";
-    const URL_twitter = "https://github.com/juliogouveia";
+    const URL_linkedin = "https://www.linkedin.com/in/juliogouveia23/";
+    const URL_twitter = "https://twitter.com/JulioGouveia11";
     
     return (
         <ContainerSobre>
