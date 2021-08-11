@@ -19,10 +19,13 @@ ContainerSobre.Imagem = styled.div`
    display: flex;
    flex-direction: column;
    margin: 0 auto;
+   width: 300px;
+   height: 300px;
+   background-image: url("https://github.com/juliogouveia.png");
+   background-repeat: round;
    border: solid 3px;
    border-radius: 300px;
    border-color: ${({ theme }) => theme.colors.borders.main.color};
-   width: 300px;
 `
 
 ContainerSobre.Contato = styled.div`
@@ -44,7 +47,7 @@ export function WrapperSobre () {
                 <Text tag="h2" variant="title">Sobre mim: </Text>
             </ContainerSobre.Texto>
             <ContainerSobre.Imagem>
-                <img src="https://github.com/juliogouveia.png" style={ {borderRadius:'300px'}}></img> 
+               
             </ContainerSobre.Imagem>  
             <ContainerSobre.Contato>
                 <a href={URL_github}><LogoGit></LogoGit></a>
