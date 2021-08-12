@@ -1,4 +1,5 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
+import { breakpointsMedia } from "../../../theme/utils/breakpointsMedia"
 
 export const Card = styled.div`
     border-radius: 3px;
@@ -9,6 +10,12 @@ export const Card = styled.div`
     flex-direction: column;
     align-items: center;
     
+    ${breakpointsMedia({
+        lg: css`
+            margin: 0 22px;
+        `
+    })}
+
 `
 Card.Img = styled.div`
     background-image: url('${(props) => props.src}');

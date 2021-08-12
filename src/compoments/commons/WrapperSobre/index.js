@@ -1,5 +1,6 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { LogoGit, LogoLinkedin, LogoTwitter } from "../../../theme/img";
+import { breakpointsMedia } from "../../../theme/utils/breakpointsMedia";
 import { Text } from "../../foundation/Text";
 
 const ContainerSobre = styled.section`
@@ -32,7 +33,14 @@ ContainerSobre.Contato = styled.div`
     display: flex;
     justify-content: space-around;
     padding: 45px;
-    margin: 0 30px;
+    margin: 0 60px;
+
+    ${breakpointsMedia({
+        lg: css`
+            margin: 0 700px;
+        `
+    })}
+
 `
 
 export function WrapperSobre () {

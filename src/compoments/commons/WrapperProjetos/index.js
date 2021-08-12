@@ -1,19 +1,29 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
+import { breakpointsMedia } from "../../../theme/utils/breakpointsMedia"
 import { Text } from "../../foundation/Text"
 import { Card } from "../Card"
 
-
-
 const ContainerProjetos = styled.div`
+    
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    ${breakpointsMedia({
+        lg: css`
+            flex-direction: row;
+            margin: 0 auto;
+            
+        `
+    })}
+
 `
 
 export function WrapperProjetos ({card}) {
     return (
+        <>
+        <Text tag="h2" variant="title"  style={{ textAlign: 'center'}}> Projetos </Text>
         <ContainerProjetos>
-            <Text tag="h2" variant="title" > Projetos </Text>
             {card.map((card) => {
                     return (
                         <Card key={card.title}>
@@ -27,5 +37,7 @@ export function WrapperProjetos ({card}) {
                 })
             }
         </ContainerProjetos>
+        </>
+        
     )
 }

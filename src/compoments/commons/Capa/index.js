@@ -1,5 +1,6 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { ImagemCapa } from "../../../theme/img";
+import { breakpointsMedia } from "../../../theme/utils/breakpointsMedia";
 import { Text } from "../../foundation/Text";
 
 const CapaWrapper = styled.div`
@@ -8,8 +9,15 @@ const CapaWrapper = styled.div`
     height: 50%;
     border-bottom: 2px solid;
     border-color: ${({ theme }) => theme.colors.borders.main.color};
-    padding: 2rem;
+    padding: 3rem;
 
+    ${breakpointsMedia({
+        lg: css`
+            padding: 10rem;
+             min-height: 980px;
+        `
+    })}
+   
 `
 
 export default function Capa () {
